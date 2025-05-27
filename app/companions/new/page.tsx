@@ -2,7 +2,6 @@ import CompanionForm from "@/components/CompanionForm";
 import { newCompanionPermissions } from "@/lib/actions/companion.action";
 import { PricingTable } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
-import Image from "next/image";
 import { redirect } from "next/navigation";
 
 const CreateNewCompanion = async () => {

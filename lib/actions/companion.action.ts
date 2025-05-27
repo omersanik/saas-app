@@ -49,12 +49,14 @@ export const getAllCompanions = async ({
 
 export const getCompanion = async (id: string) => {
   const supabase = CreateSupabaseClient();
+
   const { data, error } = await supabase
     .from("companions")
     .select()
     .eq("id", id);
 
-  if (error) console.log(error);
+  if (error) return console.log(error);
+
   return data[0];
 };
 
